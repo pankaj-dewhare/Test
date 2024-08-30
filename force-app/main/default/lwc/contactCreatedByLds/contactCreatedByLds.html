@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Contact form creation by Lightning Data Service">
+        <lightning-record-form
+        object-api-name={contactObject}
+        fields={myFields}
+        onsuccess={handleContactCreated}
+  >
+  </lightning-record-form>
+    </lightning-card>
+</template>

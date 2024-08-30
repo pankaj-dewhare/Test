@@ -1,0 +1,16 @@
+<!--User Story 2] Print “In Progress” if Current Applicant Gender is “Male”. “Closed” for Gender Otherwise.-->
+<template>
+
+    <lightning-card title="Applicant Gender">
+    
+        <p><lightning-formatted-text value={gender} ></lightning-formatted-text></p>
+<template if:true={genderFlag}>
+        InProgress
+    </template>
+    
+    <template if:false={genderFlag}>
+        Closed
+    </template>
+    </lightning-card>
+    
+</template>

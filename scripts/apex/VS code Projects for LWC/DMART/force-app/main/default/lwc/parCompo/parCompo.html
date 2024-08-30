@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent compo">
+        Parent ka already declared value x = {x} <br>
+
+        <lightning-button variant="brand" label="Send Data to child" onclick={handleButton}></lightning-button> <br>
+
+        <c-ch-compo z={x} v={c}></c-ch-compo>
+    </lightning-card>
+</template>

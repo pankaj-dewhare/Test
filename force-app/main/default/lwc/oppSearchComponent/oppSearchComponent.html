@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Search Component">
+        <lightning-combobox
+        name="Account Stagename"
+        label="Enter Stage Name"
+        value={opportunityObject.StageName}
+        placeholder="Enter Stage Name"
+        options={stageOptions}
+        onchange={handleStageChange} ></lightning-combobox>
+
+    </lightning-card>
+</template>

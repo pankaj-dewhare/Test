@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
+    <!--    <div class="slds-m-around_medium">
+            <template if:true={applicantList.data}>
+            <template for:each={applicantList.data} for:item="objApp">
+              <p key={objApp.Id}>{objApp.First_Name__c}</p>
+              <p key={objApp.Id}>{objApp.Gender__c}</p>
+              <p key={objApp.Id}>{objApp.Police_Verification__c}</p>
+              </template>
+              
+            </template>
+        </div> -->
+
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >First Name </span></th>
+                    <th scope="col"><span class="slds-truncate">Gender</span></th>
+                    <th scope="col"><span class="slds-truncate">Police Verification</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <template for:each={applicantList.data} for:item="objOpp">
+                            <tr key={objOpp.id}>
+                                  <td>
+                                        {objOpp.First_Name__c}
+                                  </td>  
+    
+                                  <td>
+                                    {objOpp.Gender__c}
+                                </td> 
+                                <td>
+                                    {objOpp.police_Verification__c}
+                                </td>  
+                            </tr>
+    
+                       </template>   
+                              
+            </tbody>
+    </table>
+    
+      </lightning-card>
+</template>

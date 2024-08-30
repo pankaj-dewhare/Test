@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="small"></lightning-icon>
+            <b><i>Calculator</i></b>
+        </h3>
+
+        <div>
+            <lightning-input type="number" name="num1" label="Enter First Digit"  placeholder="Enter Digit1" onchange={getDigit1}></lightning-input>
+            <lightning-input type="number" name="num2" label="Enter Second Digit" placeholder="Enter Digit2" onchange={getDigit2}></lightning-input>
+        </div>
+    
+        <div slot="footer">
+            <lightning-button variant="brand" label="Add" title="Primary action" onclick={performAdd} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="success" label="Sub" title="Primary action" onclick={performSub} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="neutral" label="Mul" title="Primary action" onclick={performMul} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="destructive" label="Div" title="Primary action" onclick={performDiv} class="slds-m-left_x-small"></lightning-button>
+       </div> 
+
+       <div>
+        <p class="slds-var-p-around_medium">The outcome of Digit 1 and Digit 2 = {result}</p>
+       </div>
+ 
+    </lightning-card>
+</template>

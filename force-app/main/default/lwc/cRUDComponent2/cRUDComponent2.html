@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="CRUD Function">
+    <lightning-button variant="brand" icon-name="utility:record_create" label="Create" onclick={createButtonHandler}></lightning-button> &nbsp;
+    <lightning-button variant="success" icon-name="utility:search" label="Search" onclick={searchButtonHandler}></lightning-button> &nbsp;
+    <lightning-button variant="neutral" icon-name="utility:record_update" label="Update" onclick={updateButtonHandler}></lightning-button> &nbsp;
+    <lightning-button variant="destructive" icon-name="utility:record_delete" label="Delete" onclick={deleteButtonHandler}></lightning-button> &nbsp;
+
+    <lightning-input type="text" label="Enter Account Name" data-formfield="accName"></lightning-input> <br>
+
+    <!-- Account Type Combobox start-->
+    <lightning-combobox
+            name="accType"
+            label="Account Type"
+            value={accountObject.type}
+            placeholder="Select Account Type"
+            options={typeOptions}
+            onchange={handleTypeChange} ></lightning-combobox> <br>
+<!-- Account Type Combobox End-->
+
+ <!-- Account SLA Combobox start-->
+<lightning-combobox
+           name="accSLA"
+           label="Account SLA"
+           value={accountObject.SLA__c}
+           placeholder="Select Account SLA"
+           options={slaOptions}
+           onchange={handleslaChange} ></lightning-combobox> <br>
+
+           <lightning-button variant="brand" icon-name="utility:save" label="Save" onclick={createSaveButtonHandler}></lightning-button> &nbsp;
+           <lightning-button variant="success" icon-name="utility:save" label="Search Now" onclick={searchNowButtonHandler}></lightning-button> &nbsp;
+           <lightning-button variant="neutral" icon-name="utility:save" label="Update Now" onclick={updateButtonHandler}></lightning-button> &nbsp;
+
+<!-- Account SLA Combobox End-->
+    </lightning-card>
+</template>

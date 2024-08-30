@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Applicant Data in Table Format" >
+    <lightning-input type="date" label="Select From Date" data-formfield="fromDate"></lightning-input> <br>
+    <lightning-input type="date" label="Select To Date" data-formfield="toDate" onblur={onblurHandler}></lightning-input> <br>
+    
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate" >Name</span></th>
+                <th scope="col"><span class="slds-truncate">First Name</span></th>
+                <th scope="col"><span class="slds-truncate">Last Name</span></th>
+                <th scope="col"><span class="slds-truncate">Gender</span></th>
+                <th scope="col"><span class="slds-truncate">CreatedDate</span></th>
+                <th scope="col"><span class="slds-truncate">CreatedBy</span></th>
+
+            </tr>
+        </thead>
+        <tbody>
+                <template for:each={appList} for:item="app">
+                        <tr key={app.id}>
+                            <td> {app.Name} </td>
+                            <td> {app.First_Name__c} </td>
+                            <td> {app.Last_Name__c} </td>
+                            <td> {app.Gender__c} </td>
+                            <td> {app.CreatedDate} </td>
+                            <td> {app.CreatedBy.Name} </td>
+                        </tr>
+
+                </template>            
+        </tbody>
+</table>
+
+    </lightning-card>
+</template>

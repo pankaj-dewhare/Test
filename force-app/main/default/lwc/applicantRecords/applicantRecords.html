@@ -1,0 +1,25 @@
+<template>
+   <lightning-card>
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">First Name</span></th>
+                <th scope="col"><span class="slds-truncate">Last Name</span></th>
+                <th scope="col"><span class="slds-truncate">Gender</span></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            
+                <template for:each={applicantList.data} for:item="app">
+                        <tr key={app.id}>
+                            <td> {app.First_Name__c} </td>
+                            <td> {app.Last_Name__c} </td>
+                            <td> {app.Gender__c} </td>
+                        </tr>
+
+                </template>            
+        </tbody>
+</table>
+   </lightning-card> 
+</template>

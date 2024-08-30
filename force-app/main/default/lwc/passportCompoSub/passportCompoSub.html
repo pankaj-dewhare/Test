@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Passport Sub">
+        PassportObjectList = {passList}
+        <lightning-datatable
+            key-field="Id"
+            data={passlist}
+            columns={columns}    
+            draft-values={draftValues} 
+                                 
+            > 
+</lightning-datatable>
+
+    </lightning-card>
+</template>

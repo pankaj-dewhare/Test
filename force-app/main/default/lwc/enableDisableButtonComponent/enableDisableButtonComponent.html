@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="ENable Disable Compo">
+        <lightning-button variant="Brand" label="Search" icon-name="utility:search" onclick={searchButtonHandler} disabled={searchButtonFlag}></lightning-button> &nbsp;
+        <lightning-button variant="Success" label="Edit" icon-name="utility:edit" onclick={editButtonHandler} disabled={editButtonFlag}></lightning-button> <br>
+        
+        <template if:true={searchButtonFlag}>
+        You clicked search
+        </template>
+
+
+        <template if:false={searchButtonFlag}>
+        You clicked edit
+        </template>
+    </lightning-card>
+</template>

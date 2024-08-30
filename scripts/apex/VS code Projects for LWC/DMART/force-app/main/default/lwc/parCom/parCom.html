@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent to child component">
+        <lightning-combobox
+            name="oppStage"
+            label="Opportunity Stages"
+            value={value}
+            placeholder="Select Stage"
+            options={stageOptions}
+            onchange={handleStageChange} ></lightning-combobox>
+        <c-chi-com opportunity-list={oppList}></c-chi-com>
+    </lightning-card>
+</template>

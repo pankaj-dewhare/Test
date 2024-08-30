@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Account Records">
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Account Name </span></th>
+                    <th scope="col"><span class="slds-truncate">Account Type</span></th>
+                    <th scope="col"><span class="slds-truncate">Account Rating</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <template for:each={accountList.data} for:item="objAcc">
+                            <tr key={objAcc.id}>
+                                <td>{objAcc.Name}</td>
+                                <td>{objAcc.Type}</td>  
+                                <td>{objAcc.Rating}</td>
+                            </tr>
+    
+                       </template>             
+            </tbody>
+    </table>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <lightning-input type="text" label="Enter First Letter" data-formfield="appName" onkeyup={handleonkey}></lightning-input> <br>
+
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Enter Applicant First Name</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                    <template for:each={appList} for:item="app">
+                            <tr key={app.id}>
+                                <td> {app.First_Name__c} </td>
+                            </tr>
+
+                    </template>            
+            </tbody>
+    </table>
+
+    </lightning-card>
+</template>

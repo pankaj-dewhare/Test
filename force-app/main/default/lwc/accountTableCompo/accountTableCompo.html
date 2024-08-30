@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Account Table">
+    <lightning-button variant="brand" label="Search" icon-name="utility:search" onclick={handleSearchButton}></lightning-button> <br>
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate" >Account ID</span></th>
+                <th scope="col"><span class="slds-truncate">Account Name</span></th>
+                <th scope="col"><span class="slds-truncate">Type</span></th>
+                <th scope="col"><span class="slds-truncate">SLA</span></th>
+                <th scope="col"><span class="slds-truncate">Created Date</span></th>
+
+            </tr>
+        </thead>
+        <tbody>
+        
+            
+                <template for:each={accList} for:item="acc">
+                        <tr key={acc.id} style="background-color:#4bfddc">
+                            <td> {acc.Id} </td>
+                            <td> {acc.Name} </td>
+                            <td> {acc.Type} </td>
+                            <td> {acc.SLA__c} </td>
+                            <td> {acc.CreatedDate} </td>
+                                
+                            
+                        </tr>
+
+                </template>            
+        </tbody>
+</table>
+
+    </lightning-card>
+</template>

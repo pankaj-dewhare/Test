@@ -1,0 +1,53 @@
+<!--User Story 2] Display all the Accounts when a Type is selected from the Picklist.-->
+<template>
+    <lightning-card title="Account Table">
+
+        <lightning-combobox
+        name="accountSla"
+        label="Account Sla"
+        value={accountObject.SLA__c}
+        placeholder="Select Account SLA"
+        options={slaOptions}
+        onchange={handleSlaChange} ></lightning-combobox> <br>
+
+
+        <lightning-combobox
+            name="accountType"
+            label="Account Type"
+            value={accountObject.Type}
+            placeholder="Select Account Type"
+            options={typeOptions}
+            onchange={handleTypeChange} ></lightning-combobox> <br>
+
+
+         
+            Total Record Found = {totalRecord}
+            <table class="slds-table slds-table--bordered slds-table--striped">
+                <thead>
+                    <tr>
+                        <th scope="col"><span class="slds-truncate" >Account Name </span></th>
+                        <th scope="col"><span class="slds-truncate">Rating</span></th>
+                        <th scope="col"><span class="slds-truncate">SLA</span></th>
+                        <th scope="col"><span class="slds-truncate">Type</span></th>
+                        <th scope="col"><span class="slds-truncate">CreatedDate</span></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        <template for:each={accList} for:item="acc">
+                                <tr key={acc.id}>
+                                      <td>{acc.Name}</td>
+                                      <td>{acc.Rating}</td>
+                                      <td>{acc.SLA__c}</td>
+                                      <td>{acc.Type}</td>
+                                      <td>{acc.CreatedDate}</td>
+                                </tr>
+        
+                           </template>            
+                </tbody>
+        </table>
+        
+
+    </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Contact Data Table">
+    <b>Selected Records =</b> {deleteSelectedRecords}  <br>
+
+    <lightning-button variant="brand" label="Delete Selected Record" icon-name="utility:delete" onclick={handleDeleteButton}></lightning-button> <br>
+    <lightning-input type="search" label="Enter Contact Name" data-formfield="contName" onkeyup={handleOnKeyUp}></lightning-input> 
+        
+    </lightning-card>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Data Table Handling Compo">
+     Selected Records = {selectedRecordCount} <br>
+
+    <lightning-button variant="destructive" label="Delete Selected Records" icon-name="utility:delete" onclick={handleDeleteButton}></lightning-button> <br>
+    <lightning-input type="search" label="Enter First Letter" data-formfield="appName" onkeyup={handleOnKeyUp}></lightning-input> <br>
+
+    <template if:true={showSpinnerFlag}>
+        <div class="exampleHolder">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </div>
+
+    </template>
+
+    <template if:true={showTableFlag}>
+    <lightning-datatable
+            key-field="Id"
+            data={appList}
+            columns={columns}    
+            draft-values={draftValues} 
+            onrowselection={selectedRecordsHandler}                     
+            > 
+</lightning-datatable>
+</template>
+    </lightning-card>
+</template>

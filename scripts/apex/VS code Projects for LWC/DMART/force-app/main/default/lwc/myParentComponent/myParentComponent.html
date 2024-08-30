@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Parent Pop up Modal">
+       <lightning-button variant="brand" icon-name="utility:search" label="Show Pop Up" onclick={showPopUpHandler}></lightning-button> <br>
+
+       <template if:true={showPopUpFlag}>
+        <c-my-child-component onshowpopupevent={popUpMethod}></c-my-child-component>
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card>
+        <lightning-input type="Date" label="From Date" data-formfield="fDate"></lightning-input> <br>
+        <lightning-input type="Date" label="To Date" data-formfield="tDate"></lightning-input> <br> 
+        <lightning-input type="currency" label="Min Amount" data-formfield="minAmt"></lightning-input> <br>
+        <lightning-input type="currency" label="Max Amount" data-formfield="maxAmt"></lightning-input> <br>
+
+        <lightning-combobox
+            name="opportunity"
+            label="Opportunity Stage"
+            value={stages}
+            placeholder="Select StageName"
+            options={stageOptions}
+            onchange={handleStageChange} ></lightning-combobox>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+
+    <h1>Applicant Data </h1>
+    <template if:true={applicantRecords.Data}>
+    <template for:each={applicantRecords.Data} for:item="app">
+        <p key={app.id}>
+            First Name = {app.First_Name__c}
+            Email Id = {app.Email__c}
+            Pan card = {app.Pan_card__c}
+        </p>
+    </template>
+</template>
+    <template if:false={applicantRecords}>
+        No data present
+    </template>
+</template>

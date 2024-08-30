@@ -1,0 +1,26 @@
+<template>
+    <lightning-card>
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Opportunity Name</span></th>
+                    <th scope="col"><span class="slds-truncate">Stage</span></th>
+                    <th scope="col"><span class="slds-truncate">Created Date</span></th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                
+                    <template for:each={opportunityList} for:item="opp">
+                            <tr key={opp.id}>
+                                <td> {opp.Name} </td>
+                                <td> {opp.StageName} </td>
+                                <td> {opp.CreatedDate} </td>
+                                
+                            </tr>
+
+                    </template>            
+            </tbody>
+    </table>
+    </lightning-card>
+</template>

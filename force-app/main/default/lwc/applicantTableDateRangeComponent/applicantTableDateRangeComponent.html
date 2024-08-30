@@ -1,0 +1,38 @@
+<template>
+    <!--User Story 3]  Display the Applicant Records created in the selected Date Range.-->
+    <lightning-card title="Applicant Table New">
+        <lightning-input type="Date" label="From Date" data-formfield="fromDate"></lightning-input> <br>
+        <lightning-input type="Date" label="To Date" data-formfield="toDate" onblur={handleBlurMethod}></lightning-input> <br>
+
+
+        Total Records = {totalReord} <br> <br>
+
+        <template if:true={appTableShowFlag}>
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Applicant ID </span></th>
+                    <th scope="col"><span class="slds-truncate">First Name</span></th>
+                    <th scope="col"><span class="slds-truncate">Last Name</span></th>
+                    <th scope="col"><span class="slds-truncate">Created Date</span></th>
+                    <th scope="col"><span class="slds-truncate">Created By</span></th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                    <template for:each={appList} for:item="app">
+                            <tr key={app.id}>
+                                  <td>{app.Name}</td> 
+                                  <td>{app.First_Name__c}</td> 
+                                  <td>{app.Last_Name__c}</td> 
+                                  <td>{app.CreatedDate}</td> 
+                                  <td>{app.CreatedBy.Name}</td> 
+                            </tr>
+    
+                       </template>            
+            </tbody>
+    </table>
+</template>
+
+    </lightning-card>
+</template>

@@ -1,0 +1,38 @@
+<template>
+ <lightning-card title="Applicant Table shown by date">
+
+    Total Records = {totalRecords}
+ <lightning-input type="date" label="From Date" data-formfield="fDate"></lightning-input> <br>
+ <lightning-input type="date" label="To Date" data-formfield="tDate" onblur={handleOnBlur}></lightning-input> <br>
+
+ <table class="slds-table slds-table--bordered slds-table--striped">
+    <thead>
+        <tr>
+            <th scope="col"><span class="slds-truncate" >Applicant Id</span></th>
+            <th scope="col"><span class="slds-truncate">First Name</span></th>
+            <th scope="col"><span class="slds-truncate">Last Name</span></th>
+            <th scope="col"><span class="slds-truncate">Created Date</span></th>
+            <th scope="col"><span class="slds-truncate">Created By</span></th>
+
+        </tr>
+    </thead>
+    <tbody>
+    
+        
+            <template for:each={dateList} for:item="app">
+                    <tr key={app.id}>
+                        <td> {app.Name} </td>
+                        <td> {app.First_Name__c} </td>
+                        <td> {app.Last_Name__c} </td>
+                        <td> {app.CreatedDate} </td>
+                        <td> {app.CreatedBy.Name} </td>
+                            
+                        
+                    </tr>
+
+            </template>            
+    </tbody>
+</table>
+
+ </lightning-card>   
+</template>

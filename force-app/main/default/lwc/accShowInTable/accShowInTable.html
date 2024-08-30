@@ -1,0 +1,41 @@
+<!--User Story 2] Display all the Accounts when a Type is selected from the Picklist.-->
+<template>
+   <lightning-card title="Account Table">
+    <lightning-combobox
+    name="accType"
+    label="Account Type"
+    value={accountObject.type}
+    placeholder="Select Account Type from picklist"
+    options={typeOptions}
+    onchange={handleTypeChange} ></lightning-combobox> <br>
+
+    Total Records = {totalRecord} <br> <br>
+
+<template if:true={showTableFlag}>
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate" >Account Name </span></th>
+                <th scope="col"><span class="slds-truncate">Type</span></th>
+                <th scope="col"><span class="slds-truncate">SLA</span></th>
+                <th scope="col"><span class="slds-truncate">Rating</span></th>
+                <th scope="col"><span class="slds-truncate">Created Date</span></th>
+            </tr>
+        </thead>
+        <tbody>
+           
+                <template for:each={accList} for:item="acc">
+                        <tr key={acc.id}>
+                              <td>{acc.Name}</td>  
+                              <td>{acc.Type}</td> 
+                              <td>{acc.SLA__c}</td> 
+                              <td>{acc.Rating}</td> 
+                              <td>{acc.CreatedDate}</td> 
+                        </tr>
+
+                   </template>            
+        </tbody>
+</table>
+</template>
+   </lightning-card> 
+</template>

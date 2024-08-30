@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Applicant form creation by Lightning Data Service">
+        <lightning-record-form
+        object-api-name={applicantObject}
+        fields={myFields}
+        onsuccess={handleApplicantCreated}
+  >
+  </lightning-record-form>
+    </lightning-card>
+</template>

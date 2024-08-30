@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Applicant Form">
+        <lightning-input type="text" label="First Name" data-formfield="appName"></lightning-input> <br>
+        You have entered = {fName}
+        <lightning-input type="text" label="Last Name" data-formfield="lstName"></lightning-input> <br>
+        You have entered = {lName}
+        <lightning-input type="number" label="Contact Number" data-formfield="contactNu"></lightning-input> <br>
+        You have entered = {cNumber}
+        <lightning-input type="email" label="Email Id" data-formfield="emailId"></lightning-input> <br>
+        You have entered = {eml}
+        <lightning-input type="text area" label="Enter Address" data-formfield="address"></lightning-input> <br>
+        You have entered = {add}
+
+
+        <lightning-button variant="brand" label="Show" icon-name="utility:search" onclick={handleShowButton} ></lightning-button> <br> <br>
+
+       
+    </lightning-card>
+</template>

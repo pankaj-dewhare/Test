@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Record Table">
+            
+        <template if:true={oppShowTableFlag}>
+        <lightning-datatable
+        key-field="Id"
+        data={receivedOppList}
+        columns={columns}                               
+        > 
+</lightning-datatable>
+</template>
+        
+            </lightning-card>
+</template>

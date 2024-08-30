@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Applicant Data Table">
+     Selected Records for delete = {SelectedRecords} <br>
+
+     <lightning-button variant="destructive" label="Delete Selected Records" icon-name="utility:delete" onclick={handleDeleteButton}></lightning-button> <br>
+     <lightning-input type="search" label="Enter Applicant Name" data-formfield="appName" onkeyup={searchRecordsForDelete}></lightning-input> <br>
+    </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Data fetching by first name">
+       <lightning-input type="text" label="Enter first letter" data-formfield="appName" onkeyup={handleOnKeyUp}></lightning-input> <br>
+
+       <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">First Name</span></th>
+            </tr>
+        </thead>
+        <tbody>
+           
+                <template for:each={appList} for:item="app">
+                        <tr key={app.id}> 
+                              <td>{app.First_Name__c}</td> 
+                        </tr>
+
+                   </template>            
+        </tbody>
+</table>
+    </lightning-card>
+</template>

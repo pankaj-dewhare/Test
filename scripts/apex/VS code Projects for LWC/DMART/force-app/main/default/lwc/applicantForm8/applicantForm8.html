@@ -1,0 +1,16 @@
+<template>
+   <lightning-card title="Applicant Form">
+<lightning-input type="text" label="Enter Applicant Name" data-formfield="appName"></lightning-input> <br>
+<lightning-button variant="brand" label="Search" icon-name="utility:search" onclick={searchButtonHandler}></lightning-button> <br>
+
+First Name = {applicantObj.First_Name__c} <br>
+Last Name = {applicantObj.Last_Name__c} <br>
+Gender = {applicantObj.Gender__c} <br>
+
+<template if:true={showSpinnerFlag}>
+<div class="exampleHolder">
+    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+</div>
+</template>
+   </lightning-card> 
+</template>

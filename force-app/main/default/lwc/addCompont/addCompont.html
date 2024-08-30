@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="child compo">
+    Total Selected Records = {selectedRecordCount} <br> <br>
+
+        <lightning-button variant="destructive" label="Delete Selected Records" icon-name="utility:delete" onclick={deleteButtonHandler}></lightning-button> <br> <br>
+
+        <lightning-datatable
+        key-field="Id"
+        data={addressList}
+        columns={columns}    
+        draft-values={draftValues} 
+        onrowselection={selectedRecordsHandler}                         
+        > 
+</lightning-datatable>
+    </lightning-card>
+</template>

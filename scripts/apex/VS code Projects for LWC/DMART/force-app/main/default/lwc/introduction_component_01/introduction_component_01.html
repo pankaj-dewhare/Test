@@ -1,0 +1,73 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+
+        <h1 class="slds-p-horizontal_small" > 
+            <b>I am Pankaj from JS</b> </br>
+            <b>I am the best SF Dev</b>
+        </h1>
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon> <br>
+        <p class="slds-p-horizontal_small">{Intro_Msg}</p>
+        <p slot="footer">{webSite}</p>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-button variant="brand" label="JOIN NOW" title="Primary action" onclick={handleJoinNowButton} class="slds-m-left_small"></lightning-button>
+        </div>
+
+
+    </lightning-card>
+
+    <template if:true={showInputFlag}>
+
+    <lightning-card variant="Narrow"  title="Please Input Student Details" icon-name="standard:account">
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-button variant="destructive" label="HIDE FORM" title="Successful action" onclick ={handleCancelButton} class="slds-m-left_x-small"></lightning-button>
+        </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter Name" placeholder="Type Name Here"></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+
+            <lightning-input type="date" name="input4" label="Date Of Birth" placeholder="Please mention date of birth here"></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+
+            <lightning-input-address
+        address-label="Address"
+        street-label="Street"
+        city-label="City"
+        country-label="Country"
+        province-label="Province"
+        postal-code-label="PostalCode"
+        street=""
+        city=""
+        country=""
+        province=""
+        postal-code=""
+        required
+        field-level-help="Help Text for inputAddress field" ></lightning-input-address>
+        </div>
+        
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="tel" label="Contact" name="phone1" value="345987345"></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-button variant="success" label="Save" title="Successful action" ondblclick ={handleSaveButton} class="slds-m-left_x-small"></lightning-button> &nbsp;
+        </div>
+    </lightning-card>
+      </template>
+
+      <template if:false={showInputFlag}>
+      <h1> 
+        <b>To see the admission form please click 'JOIN NOW' button</b>
+      </h1>
+      </template>
+
+</template>

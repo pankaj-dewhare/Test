@@ -1,0 +1,58 @@
+<template>
+    <lightning-card title="CRUD Operation 6">
+    <lightning-button variant="brand" label="Create" icon-name="utility:record_create" onclick={createButtonHandler}></lightning-button> &nbsp;
+    <lightning-button variant="success" label="Read" icon-name="utility:search" onclick={readButtonHandler}></lightning-button> &nbsp;
+    <lightning-button variant="neutral" label="Update" icon-name="utility:record_update" onclick={updateButtonHandler}></lightning-button> &nbsp;
+    <lightning-button variant="destructive" label="Delete" icon-name="utility:delete" onclick={deleteButtonHandler}></lightning-button> &nbsp;
+
+    <lightning-input type="text" label="Enter Account Name" data-formfield="accName" value={accountObject.Name}></lightning-input> <br>
+
+    
+    <template if:true={showInputFieldFlag}>
+    <!--Account Type Combo Start-->
+    <lightning-combobox
+            name="accType"
+            label="Account Type"
+            value={accountObject.Type}
+            placeholder="Enter Account Type"
+            options={typeOptions}
+            onchange={handleTypeChange} ></lightning-combobox> <br>
+   <!--Account Type Combo End-->
+
+    <!--Account SLA Combo Start-->
+    <lightning-combobox
+     name="accSla"
+     label="Account Sla"
+     value={accountObject.SLA__c}
+     placeholder="Enter Account SLA"
+     options={slaOptions}
+     onchange={handleSlaChange} ></lightning-combobox> <br>
+    <!--Account SLA Combo End-->
+    </template>
+
+    <template if:true={showFourFieldsFlag}>
+    Account Name = {accountObject.Name} <Br>
+    Account Type = {accountObject.Type} <br>
+    Account SLA = {accountObject.SLA__c} <br>
+    Created Date = {accountObject.CreatedDate} <br> <br>
+    </template>
+
+    <template if:true={showSaveButtonFlag}>
+    <lightning-button variant="brand" label="Save" icon-name="utility:save" onclick={saveButtonHandler}></lightning-button> &nbsp;
+    </template>
+
+    <template if:true={showSearchNowButtonFlag}>
+    <lightning-button variant="success" label="Search Now" icon-name="utility:search" onclick={searchNowButtonHandler}></lightning-button> &nbsp;
+    </template>
+
+    <template if:true={showUpdateNowButtonFlag}>
+    <lightning-button variant="neutral" label="Update Now" icon-name="utility:record_update" onclick={updateNowButtonHandler}></lightning-button> &nbsp;
+    </template>
+
+    <template if:true={showSpinnerFlag}>
+    <div class="exampleHolder">
+        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+    </div>
+    </template>
+    </lightning-card>
+</template>

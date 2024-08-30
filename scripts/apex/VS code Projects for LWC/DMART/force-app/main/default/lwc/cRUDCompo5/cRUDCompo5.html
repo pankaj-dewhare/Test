@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="CRUD">
+        <lightning-button variant="brand" label="Create" icon-name="utility:record_create" onclick={createButtonHandler}></lightning-button> &nbsp;
+        <lightning-button variant="success" label="Search" icon-name="utility:search" onclick={searchButtonHandler}></lightning-button> &nbsp;
+        <lightning-button variant="neutral" label="Update" icon-name="utility:record_update" onclick={updateButtonHandler}></lightning-button> &nbsp;
+        <lightning-button variant="destructive" label="Delete" icon-name="utility:delete" onclick={deleteButtonHandler}></lightning-button> &nbsp;
+
+        <lightning-input type="text" label="Enter Account Name" data-formfield="accName" value={accountObject.Name}></lightning-input> <br>
+
+       
+    </lightning-card>
+</template>

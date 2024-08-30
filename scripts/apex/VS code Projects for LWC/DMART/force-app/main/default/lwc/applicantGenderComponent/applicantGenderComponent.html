@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <template if:true={applicantList.data}>
+                <template for:each={applicantList.data} for:item="app">
+                    <p key={app.Id}>{app.First_Name__c}</p>
+                    <p key={app.Id}>{app.Police_Verification__c}</p> &nbsp;&nbsp;
+                </template>
+            </template>
+           
+        </div>
+    </lightning-card>
+
+   
+</template>

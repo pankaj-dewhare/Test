@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="ApexWireMethodToProperty" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <template if:true={accList.data}>
+                <table class="slds-table slds-table--bordered slds-table--striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"><span class="slds-truncate" >Account Name</span></th>
+                            <th scope="col"><span class="slds-truncate">Type</span></th>
+                            <th scope="col"><span class="slds-truncate">Rating</span></th>
+                            <th scope="col"><span class="slds-truncate">SLA</span></th>
+                           
+    
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        
+                            <template for:each={accList.data} for:item="acc">
+                                    <tr key={acc.id}>
+                                        <td> {acc.Name} </td>
+                                        <td> {acc.Type} </td>
+                                        <td> {acc.Rating} </td>
+                                        <td> {acc.SLA__c} </td>
+                                    </tr>
+    
+                            </template>            
+                    </tbody>
+            </table>
+            </template>
+           
+        </div>
+    </lightning-card>
+</template>

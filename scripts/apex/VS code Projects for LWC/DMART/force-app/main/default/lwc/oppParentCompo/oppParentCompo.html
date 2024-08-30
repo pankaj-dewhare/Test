@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Opportunity Parent Compo">
+        <lightning-input type="Date" label="From Date" data-formfield="fDate"></lightning-input> <br>
+        <lightning-input type="Date" label="To Date" data-formfield="tDate"></lightning-input> <br>
+       <!-- <lightning-input type="Currency" label="Min Amount" data-formfield="minAmount"></lightning-input> <br>
+        <lightning-input type="Currency" label="Max Amount" data-formfield="maxAmount"></lightning-input> <br> -->
+
+        <lightning-combobox
+            name="StageName"
+            label="Enter Stage Name"
+            value={opportunityObject.StageName}
+            placeholder="Enter Stage Name"
+            options={stageOptions}
+            onchange={handleStageChange} ></lightning-combobox>
+
+        <c-opp-child-compo></c-opp-child-compo>
+    </lightning-card>
+</template>

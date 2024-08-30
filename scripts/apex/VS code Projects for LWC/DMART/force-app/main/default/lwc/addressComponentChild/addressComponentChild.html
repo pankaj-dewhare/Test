@@ -1,0 +1,27 @@
+<template>
+  <lightning-card title="Address Compo">
+   <table class="slds-table slds-table--bordered slds-table--striped">
+      <thead>
+          <tr>
+              <th scope="col"><span class="slds-truncate">Address ID</span></th>
+              <th scope="col"><span class="slds-truncate">Country</span></th>
+              <th scope="col"><span class="slds-truncate">State</span></th>
+              <th scope="col"><span class="slds-truncate">City</span></th>
+          </tr>
+      </thead>
+      <tbody>
+          
+              <template for:each={addressList} for:item="adr">
+                      <tr key={adr.id} >
+                          <td> {adr.Name} </td>
+                          <td> {adr.Country__c} </td>
+                          <td> {adr.State__c} </td>
+                          <td> {adr.City__c} </td>           
+                      </tr>
+
+              </template>            
+      </tbody>
+</table>
+
+  </lightning-card>
+</template>

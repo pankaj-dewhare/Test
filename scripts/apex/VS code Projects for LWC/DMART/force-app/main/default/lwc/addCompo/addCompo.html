@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Child Compo">
+    Total Selected Records = {totalRecords} <br> <br>
+
+        <lightning-datatable
+            key-field="Id"
+            data={addressList}
+            columns={columns}    
+                             
+            > 
+</lightning-datatable>
+
+    </lightning-card>
+    
+</template>

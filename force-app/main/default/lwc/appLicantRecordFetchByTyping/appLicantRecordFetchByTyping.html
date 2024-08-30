@@ -1,0 +1,30 @@
+<!--User Story 3] Create a Field “Enter First Name”. When Type “A”, show all the Applicants whose Name is Starting with ‘A’. IN A TABLE
+If Enter ‘AB’, then show all the Applicants whose Name is Starting with ‘AB’. IN A TABLE
+-->
+
+<template>
+    <lightning-card title="Applicant Data found By Type a first letter">
+       
+        <lightning-input type="text" data-formfield="enterFName" label="Enter First Name" onkeyup={searchingDataByFirstLetter}></lightning-input> <br>
+
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >First Name </span></th>
+                    
+    
+                </tr>
+            </thead>
+            <tbody>
+               
+                    <template for:each={appList} for:item="objApp">
+                            <tr key={objApp.id}>
+                                  <td> {objApp.First_Name__c}</td>   
+                            </tr>
+    
+                       </template>            
+            </tbody>
+    </table>
+
+    </lightning-card>
+</template>

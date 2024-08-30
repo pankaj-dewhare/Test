@@ -1,0 +1,33 @@
+<!--Create a Button “Search” and Show Latest 10 Accounts in a Table.-->
+<template>
+    <lightning-card title="Account Latest Record">
+
+    <lightning-button variant="brand" icon-name="utility:search" label="Search" onclick={handleSearchButton}></lightning-button> <br>
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate">AccountId</span></th>
+                <th scope="col"><span class="slds-truncate">Account Name</span></th>
+                <th scope="col"><span class="slds-truncate">Created Date</span></th>
+                <th scope="col"><span class="slds-truncate">Rating</span></th>
+                <th scope="col"><span class="slds-truncate">SLA</span></th>
+            </tr>
+        </thead>
+        <tbody>
+           
+                <template for:each={accList} for:item="acc">
+                        <tr key={acc.id}> 
+                              <td>{acc.Id}</td> 
+                              <td>{acc.Name}</td> 
+                              <td>{acc.CreatedDate}</td> 
+                              <td>{acc.Rating}</td> 
+                              <td>{acc.SLA__c}</td> 
+
+                        </tr>
+
+                   </template>            
+        </tbody>
+</table>
+    </lightning-card>
+</template>

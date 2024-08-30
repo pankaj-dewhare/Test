@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Child to parent compo">
+        <lightning-datatable
+            key-field="Id"
+            data={opportunityList}
+            columns={columns}    
+            > 
+</lightning-datatable>
+        <c-child-component-new oneventname={handleChildData}></c-child-component-new>
+    </lightning-card>
+</template>

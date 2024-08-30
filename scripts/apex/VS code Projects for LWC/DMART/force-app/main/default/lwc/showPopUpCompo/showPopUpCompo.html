@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Parent Compo">
+
+        <lightning-button label="Show Popup Button" variant="brand" onclick={popupButtonHandler}></lightning-button> <br>
+
+        <template if:true={showPopupFlag}>
+        <c-popup-modal-compo onmychildevent={showFlagMethod}></c-popup-modal-compo>
+    </template>
+    </lightning-card>
+</template>

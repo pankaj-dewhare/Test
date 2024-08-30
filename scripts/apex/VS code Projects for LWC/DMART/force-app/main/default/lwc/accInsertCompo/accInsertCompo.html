@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Account Page">
+        <lightning-input type="text" label="Enter Account Name" data-formfield="accName"></lightning-input> <br>
+
+        <lightning-combobox
+            name="Ind"
+            label="Account Industry"
+            value={value}
+            placeholder="Select Progress"
+            options={industryOptions}
+            onchange={handleIndustryChange} ></lightning-combobox> <br>
+
+            <lightning-button variant="brand" label="Save" onclick={handleSaveButton}></lightning-button>
+
+
+    </lightning-card>
+</template>

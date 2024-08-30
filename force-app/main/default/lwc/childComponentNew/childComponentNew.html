@@ -1,0 +1,11 @@
+<template>
+    <lightning-card>
+        <lightning-combobox
+        name="oppStage"
+        label="Opportunity Stage"
+        value={objectOpportunity.StageName}
+        placeholder="Select Stage"
+        options={stageOptions}
+        onchange={handleStageChange} ></lightning-combobox>
+    </lightning-card>
+</template>

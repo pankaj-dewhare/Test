@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Account Record Of Juhi">
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+                <tr>
+                    <th scope="col"><span class="slds-truncate" >Account Name</span></th>
+                    <th scope="col"><span class="slds-truncate">Type</span></th>
+                    <th scope="col"><span class="slds-truncate">SLA</span></th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                    <template for:each={accountList.data} for:item="acc">
+                            <tr key={acc.id}>
+                                <td> {acc.Name} </td>
+                                <td> {acc.Type} </td>
+                                <td> {acc.SLA__c} </td>
+                            </tr>
+
+                    </template>            
+            </tbody>
+    </table>
+    </lightning-card>
+</template>

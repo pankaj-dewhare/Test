@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+    Current record Id = {recordId} <br>
+<template if:true={genderFlag}>
+    In Progress
+</template>
+
+<template if:false={genderFlag}>
+    Closed
+</template>
+    </lightning-card>
+</template>
