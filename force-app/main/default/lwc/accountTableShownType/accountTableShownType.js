@@ -8,6 +8,7 @@ export default class AccountTableShownType extends LightningElement {
     accList
     showSpinnerFlag = false
     showTableFlag = false
+    
    
     get typeOptions() {
         return [
