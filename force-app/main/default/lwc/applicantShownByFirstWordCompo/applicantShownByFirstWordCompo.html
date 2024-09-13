@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Applicant First Word Compo">
+    <lightning-input type="search" label="Enter First Name" data-formfield="fName" onkeyup={onkeyupFunction}></lightning-input> <br>
+
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr>
+                <th scope="col"><span class="slds-truncate" >First Name</span></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            
+                <template for:each={appList} for:item="app">
+                        <tr key={app.id}>
+                            <td> {app.First_Name__c} </td>    
+                        </tr>
+ 
+                </template>            
+        </tbody>
+</table>
+
+    </lightning-card>
+</template>
