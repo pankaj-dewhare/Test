@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Two Way Data Binding" icon-name="custom:custom2"></lightning-card>
+
+    <lightning-input label="Full Name" onchange={onkeyupHandler} value={fullName}></lightning-input> <br>
+
+    <lightning-input label="Title Name" onchange={onchangeHandler} value={title}></lightning-input> <br>
+
+    <div>
+        <h1>My FullName is <b>{fullName}</b> and Tile is <b>{title}</b></b></h1>
+    </div>
+</template>
