@@ -1,0 +1,19 @@
+<template>
+
+    <template if:true={test}>
+    <lightning-card title="Employee Details" icon-name="custom:custom1">
+    <lightning-input label="Enter Name" onchange={handleOnchangeName}></lightning-input>
+    <lightning-input label="Salary" onchange={handleOnChangeSalary}></lightning-input>
+    <lightning-input label="Age" onchange={handleChangeAge}></lightning-input> <br>
+    <lightning-button label="Save" onclick={saveButtonHandler}></lightning-button>
+    </lightning-card>
+    </template>
+
+    <template if:false={test}>
+    <lightning-card title="Employee Details">
+     Employee Name = {name} <br>
+     Employee Salary = {salary} <br>
+     Employee Age = {age} <br>
+    </lightning-card>
+</template>
+</template>
